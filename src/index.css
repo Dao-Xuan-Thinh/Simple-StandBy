@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* ─── CSS Variable Theme System ─────────────────────────────────────── */
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent: #3b82f6;
+  --accent-glow: rgba(59, 130, 246, 0.3);
+  --border: rgba(255,255,255,0.08);
+  --widget-bg: rgba(255,255,255,0.05);
+  --widget-border: rgba(255,255,255,0.1);
+  --shadow: 0 4px 32px rgba(0,0,0,0.6);
+  --font-display: system-ui, sans-serif;
+  --dim-opacity: 1;
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* ─── Canvas ─────────────────────────────────────────────────────────── */
+.standby-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-primary);
+  opacity: var(--dim-opacity);
+  transition: opacity 1s ease;
+}
+
+/* ─── Scrollbars ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
