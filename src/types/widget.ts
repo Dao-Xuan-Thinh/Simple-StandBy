@@ -5,6 +5,7 @@ export type WidgetType =
   | 'calendar'
   | 'music'
   | 'photo'
+  | 'ios-clock'
 
 export interface WidgetPosition {
   x: number

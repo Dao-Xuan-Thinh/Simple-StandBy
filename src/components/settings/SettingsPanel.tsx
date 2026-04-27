@@ -11,12 +11,13 @@ import type { WidgetType } from '../../types/widget'
 type Tab = 'layout' | 'theme' | 'widgets' | 'screen' | 'apis'
 
 const WIDGET_OPTIONS: { type: WidgetType; label: string; emoji: string }[] = [
-  { type: 'clock',    label: 'Clock',    emoji: '🕐' },
-  { type: 'date',     label: 'Date',     emoji: '📅' },
-  { type: 'weather',  label: 'Weather',  emoji: '🌤' },
-  { type: 'calendar', label: 'Calendar', emoji: '📆' },
-  { type: 'music',    label: 'Music',    emoji: '🎵' },
-  { type: 'photo',    label: 'Photo',    emoji: '🖼' },
+  { type: 'ios-clock', label: 'iOS Clock',  emoji: '🔵' },
+  { type: 'clock',     label: 'Clock',      emoji: '🕐' },
+  { type: 'date',      label: 'Date',       emoji: '📅' },
+  { type: 'weather',   label: 'Weather',    emoji: '🌤' },
+  { type: 'calendar',  label: 'Calendar',   emoji: '📆' },
+  { type: 'music',     label: 'Music',      emoji: '🎵' },
+  { type: 'photo',     label: 'Photo',      emoji: '🖼' },
 ]
 
 export function SettingsPanel({ onClose }: { onClose: () => void }) {

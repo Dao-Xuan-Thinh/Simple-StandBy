@@ -15,6 +15,21 @@ const DEFAULT_PROFILE: LayoutProfile = {
   widgets: DEFAULT_WIDGETS,
 }
 
+const IOS_PROFILE: LayoutProfile = {
+  id: 'ios',
+  name: 'iOS',
+  widgets: [
+    {
+      id: 'w-ios-clock',
+      type: 'ios-clock',
+      position: { x: 0, y: 0 },
+      size: { w: 100, h: 100 },
+      zIndex: 0,
+      config: { use24h: true, showSecondsIndicator: true },
+    },
+  ],
+}
+
 interface LayoutState {
   profiles: LayoutProfile[]
   activeProfileId: string
@@ -36,7 +51,7 @@ interface LayoutState {
 export const useLayoutStore = create<LayoutState>()(
   persist(
     (set, get) => ({
-      profiles: [DEFAULT_PROFILE],
+      profiles: [DEFAULT_PROFILE, IOS_PROFILE],
       activeProfileId: 'default',
       editMode: false,
 
